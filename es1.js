@@ -5,17 +5,21 @@ class Person {
     this.age = age;
   }
 
-  static whoIsOlder(person1, person2) {
-    if (person1.age > person2.age) {
-      console.log(person1.name + "è più grande di" + person2.name);
-    } else if (person2.age > person1.age) {
-      console.log(person2.name, "è più grande di", person1.name);
+  static whoIsOlder(p1, p2) {
+    if (p1.age > p2.age) {
+      console.log(p1.name + "è più grande di" + p2.name);
+    } else if (p2.age > p1.age) {
+      console.log(p2.name, "è più grande di", p1.name);
     } else {
-      console.log(person1.name, "e", person2.name, "hanno la stessa età");
+      console.log(p1.name, "e", p2.name, "hanno la stessa età");
     }
   }
 }
 
-let personeACaso = [new Person("Alberto", "24"), new Person("Emanuele", "27")];
+let personeACaso = [
+  new Person("Aragorn", 71),
+  new Person("Legolas", 271),
+  new Person("Ghimli", 203),
+];
 
 Person.whoIsOlder(personeACaso[0], personeACaso[1]);
